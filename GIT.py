@@ -7,7 +7,7 @@ from gtts import gTTS
 
 
 
-token = "NjE3NTgyNDkxMjYzMzAzNzAw.XWtOhA.siNeQDeaeZHnW_543fPgBr-P8xY"
+token = "...."
 client = discord.Client(intents=discord.Intents.default())
     
 def getPlayerGroups(playerId):
