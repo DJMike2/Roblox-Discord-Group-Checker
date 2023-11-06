@@ -18,7 +18,6 @@ def getPlayerGroups(playerId):
     #for x in range(0,len(r)):
     #    groups.append(r[x]["Id"])
     #return groups
-    #time.sleep(100)
 
 #getPlayerGroups("/groups/roles")
 
@@ -30,12 +29,6 @@ def Verification_Checklist():
     async def on_ready():
         print('logged in')
         channel = bot.get_channel(....)#
-
-    @bot.command()
-    async def Deep_Scan(ctx):
-        await ctx.send("This will take a minute...")
-        time.sleep(5)
-        await ctx.send("Due to a specific target scan, we will emailed it to root {CONFIDENTIAL}")
 
     @bot.command()
     async def List_All_Users(ctx):
@@ -78,6 +71,7 @@ def Verification_Checklist():
                     matchingGroups.append(item)
             return matchingGroups
 
+        # !!! Change whatever role/rank below you want (Mine is set as Casterly) !!!
         for Member in Member_List:
             hasNickname = isinstance(Member.nick,str)
             houseMemberRole = discord.utils.get(ctx.guild.roles, name="{Casterly Member}")
@@ -94,7 +88,7 @@ def Verification_Checklist():
                         except ValueError:
                             basicMembers.append(Member.nick + " has a bad nickname.")
                         else:
-                            matchingGroups = comparePlayerGroupsToOthers(getPlayerGroups(Member.nick.partition("-")[2]),getGroupAllies(8488180))##
+                            matchingGroups = comparePlayerGroupsToOthers(getPlayerGroups(Member.nick.partition("-")[2]),getGroupAllies(8488180))## CHANGE GROUP ID !!!!!!!!!!!
                             isInCasterly = False
                             otherHouses = []
                             for item in matchingGroups:
